@@ -1,0 +1,299 @@
+@charset "utf-8";
+@import url("./fonts.css");
+@import url("./normalize.css");
+/* 스타일 초기화 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* 숨김 콘텐츠 */
+.skip-nav{
+    display: none;
+}
+.readable-hidden{
+    background-color: red;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* 링크 스타일 */
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:visited{
+    color: #666;
+}
+a:hover, a:focus{
+    color: #f00;
+}
+/* 본문 스타일 */
+html{
+    font-size: 10px;
+}
+body{
+    color: #181818;
+    background-color: #fff;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family:"Noto Sans Regular", sans-serif;
+}
+/* 레이아웃 */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+.wrapper{
+    background-color: #666;
+    background:url("./images/bg_flower.png") no-repeat 50% 0, 
+    linear-gradient(to bottom, #aaa 0%, #ccc 50%, #fff 70%, #fff 100%);
+}
+.header, .visual, .main-content, .slogan, .footer{
+    width: 940px;
+    margin: 0 auto;    
+}
+/* 헤더 */
+.header{
+    background-color: #fff;
+    position: relative;
+    padding: 10px 30px 38px 30px;
+    border-radius: 0 0 15px 15px;
+}
+/* 로고 */
+.logo{
+    position: absolute;
+    top: 52px; 
+    left: 65px;
+    z-index: 10;
+}
+/* 멤버링크 */
+.member{
+    list-style: none;
+    font-size: 0;
+    text-align: right;
+    position: relative;
+    right: -10px;
+}
+.member li{
+    display: inline;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.member li:nth-child(n+2)::before{
+    content: ":";
+}
+.member a{
+    padding: 5px 10px;
+}
+/* 메인 메뉴 */
+.main-menu{
+    background-color: #e0652c;
+    background-image: linear-gradient(to bottom, #e5892d 0%,  #e0652c 35%,  #e0652c 70%, #e5892d 100%);
+    margin-top: 10px;
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    border-top: 2px solid #000;
+    padding-left: 225px;
+}
+.main-menu::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.main-menu > li{
+    float: left;
+    position: relative;
+}
+.main-menu > li:focus, .sub-menu a:focus{
+    outline: 0;
+}
+
+/* .main-menu > li:hover span, .main-menu > li:focus span{
+    color: #ff0;
+}
+.main-menu > li:hover span::after, .main-menu > li:focus span::after{
+    content: "";
+    display: block;
+    border-top: 2px solid #000;
+    background-color: aqua;
+} */
+.menu-act span{
+    color: #ff0 !important;
+}
+.menu-act span::after{
+    content: "";
+    display: block;
+    border-top: 2px solid #000;
+}
+.main-menu span{
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.6rem;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    border-left: 2px solid rgba(255,255,255,.5);
+    font-family: 'Noto Sans Bold', sans-serif;
+    text-shadow: 
+    1px 0 0 rgba(0,0,0,.5), 
+    0 1px 0 rgba(0,0,0,.5), 
+    -1px 0 0 rgba(0,0,0,.5), 
+    0 -1px  0 rgba(0,0,0,.5);
+}
+.sub-menu{
+    list-style: none;
+    position: absolute;
+    top: 47px;
+    white-space: nowrap;
+    display: none;
+}
+/* .sub-menu-act{
+    display: block !important;
+} */
+.menu-act .sub-menu{
+    display: block !important;
+}
+.about-html{ left: 0; }
+.about-css{ left: 0;}
+.web-standard{ left: 0 }
+.web-accessibility{ right: 0; }
+.qna{ right: 0; }
+.archive{ right: 0;}
+.sub-menu li, .sub-menu a{
+    display: inline-block;
+}
+.sub-menu a{
+    padding: 7px 0;
+    margin-right: 15px;
+}
+.sub-menu a::before{
+    content: '\e804';
+    font-family: 'fontello';
+    /* font-size: .5rem;
+    vertical-align: middle; */
+    color: #000;
+    margin-right: 1em;
+}
+.sub-menu a:hover::before, .sub-menu a:focus::before{
+    content: '\e800';
+    font-size: 1.4rem;
+}
+/* 비주얼 */
+@keyframes text-ani{
+    0%{
+        font-size: 12px;
+        color: rgba(0,0,0,0);
+        transform: translate(0, 0);
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0,0,0,1);
+        transform: translate(400px, 75px);
+    }
+}
+@keyframes flower-ani{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.visual{
+    height: 120px;
+    position: relative;
+}
+.visual::before, .visual::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation-name: flower-ani;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.visual::before{
+    background: url("./images/ani_flower_01.png") no-repeat 0 -15px,
+    url("./images/ani_flower_02.png") no-repeat 670px 0; 
+}
+.visual::after{
+    background: url("./images/ani_flower_03.png") no-repeat 300px 0,
+    url("./images/ani_flower_04.png") no-repeat 800px 0; 
+    animation-delay: 1s;
+}
+.visual-text{
+    display: inline-block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation-name: text-ani;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+/* 메인 콘텐츠 */
+.main-content{
+    background-color: #fcf;
+    height: 60vh;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.group{
+    background-color: yellow;
+    border: 1px solid red;
+    height: 15vh;
+}
+.group1{
+    width: 350px;
+}
+.group2{
+    width: 480px;
+}
+.group3{
+    width: 280px;
+}
+/* 슬로건 */
+.slogan{
+    background-color: #c3f;
+    height: 10vh;
+}
+/* 푸터 */
+.footer{
+    background-color: #0f0;
+    height: 10vh;
+}
+/* fontello font */
+.icon-ok:before { content: '\e800'; } 
+.icon-plus:before { content: '\e801'; } 
+.icon-search:before { content: '\e802'; } 
+.icon-right-open:before { content: '\e803'; }
+.icon-right-dir:before { content: '\e804'; }
+.icon-angle-right:before { content: '\f105'; }
+.icon-circle:before { content: '\f111'; }

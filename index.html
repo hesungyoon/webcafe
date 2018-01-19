@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>웹카페 - HTML5, CSS3, Accessibility</title>
+    <link rel="apple-touch-icon" href="./images/common/webcafe">
+    <link rel="shortcut icon" href="./images/common/webcafe.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="skip-nav"><a href="#content">본문 바로가기</a></div>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="./images/logo.png" alt="Web Cafe">
+                </a>
+            </h1>
+            <ul class="member">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">english</a></li>
+            </ul>
+            <nav class="navigation">
+                <h2 class="readable-hidden">메인 메뉴</h2>
+                <ul class="main-menu">
+                    <li tabindex="0">
+                        <span>HTML에 대해</span>
+                        <ul class="sub-menu about-html">
+                            <li><a href="#">HTML5 소개</a></li>
+                            <li><a href="#">레퍼런스 소개</a></li>
+                            <li><a href="#">활용예제</a></li>
+                        </ul>
+                    </li>
+                    <li tabindex="0">
+                        <span>CSS에 대해</span>
+                        <ul class="sub-menu about-css">
+                            <li><a href="#">CSS 소개</a></li>
+                            <li><a href="#">CSS2 VS CSS3</a></li>
+                            <li><a href="#">CSS 애니메이션</a></li>
+                            <li><a href="#">CSS Framework</a></li>
+                        </ul>
+                    </li>
+                    <li tabindex="0">
+                        <span>웹 표준</span>
+                        <ul class="sub-menu web-standard">
+                            <li><a href="#">웹 표준이란?</a></li>
+                            <li><a href="#">W3C</a></li>
+                            <li><a href="#">HTML5의 현재와 미래</a></li>
+                        </ul>
+                    </li>
+                    <li tabindex="0">
+                        <span>웹 접근성</span>
+                        <ul class="sub-menu web-accessibility">
+                            <li><a href="#">웹 접근성의 개요</a></li>
+                            <li><a href="#">장애 환경의 이해</a></li>
+                            <li><a href="#">장차법</a></li>
+                            <li><a href="#">웹 접근성 품질마크</a></li>
+                        </ul>
+                    </li>
+                    <li tabindex="0">
+                        <span>묻고 답하기</span>
+                        <ul class="sub-menu qna">
+                            <li><a href="#">묻고 답하기</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">1대1 질문</a></li>
+                            <li><a href="#">웹표준</a></li>
+                            <li><a href="#">웹접근성</a></li>
+                        </ul>
+                    </li>
+                    <li tabindex="0">
+                        <span>자료실</span>
+                        <ul class="sub-menu archive">
+                            <li><a href="#">공개 자료실</a></li>
+                            <li><a href="#">이미지 자료실</a></li>
+                            <li><a href="#">웹 표준 자료실</a></li>
+                            <li><a href="#">웹 접근성 자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="visual">
+            <div class="visual-text">
+                Web Standards &amp; Accessibility
+            </div>
+        </div>
+        <main class="main-content" id="content">
+            <div class="group group1">
+                <div class="login">
+                    <h2 class="login-heading">로그인</h2>
+                    <form action="javascript:alert('회원님 환영합니다.');" class="login-form">
+                        <fieldset>
+                            <legend>회원 로그인 폼</legend>
+                            <div class="user-email">
+                                <label for="user-email">아이디</label>
+                                <input type="email" id="user-email" required placeholder="guest@webcafe.com">
+                            </div>
+                            <div class="user-pw">
+                                <label for="user-pw">비밀번호</label>
+                                <input type="password" id="user-pw" required placeholder="8자리 이상">
+                            </div>
+                            <button type="submit" class="btn-login">로그인</button>
+                        </fieldset>
+                    </form>
+                    <ul class="sign">
+                        <li class="signup"><a href="#">회원가입</a></li>
+                        <li class="find"><a href="#">아이디/비밀번호 찾기</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="group group2">그룹2</div>
+            <div class="group group3">그룹3</div>
+        </main>
+        <article class="slogan">
+            <h2>슬로건</h2>
+        </article>
+        <div class="footer-bg">
+            <footer class="footer">푸터</footer>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/menu-tab.js"></script>
+</body>
+
+
+</html>
