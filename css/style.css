@@ -30,13 +30,13 @@ table {
 .skip-nav{
     display: none;
 }
-.readable-hidden{
-    background-color: red;
+.readable-hidden, legend{
     position: absolute;
     width: 1px;
     height: 1px;
     margin: -1px;
     clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
     overflow: hidden;
 }
 /* 링크 스타일 */
@@ -256,28 +256,82 @@ body{
 }
 /* 메인 콘텐츠 */
 .main-content{
-    background-color: #fcf;
-    height: 60vh;
-    padding: 0 15px;
+    background-color: #fff;
+    padding: 30px 15px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: flex-start; */
     flex-wrap: wrap;
 }
 .group{
-    background-color: yellow;
-    border: 1px solid red;
-    height: 15vh;
+    background-color: #fcf;
 }
 .group1{
-    width: 350px;
+    width: 250px;
 }
 .group2{
-    width: 480px;
+    width: 380px;
 }
 .group3{
-    width: 280px;
+    width: 180px;
+}
+/* 로그인 */
+.login{
+    background-color: #e0652c;
+    background-image: radial-gradient(circle at top right, #e5892d, #e0652c);
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 #ccc;
+    padding: 10px;
+}
+.login-heading{
+    color: #ff0;
+    font-family: 'Noto Sans Bold', sans-serif;
+    text-indent: 10px;
+}
+.login-form{
+    border-radius: 5px 5px 0 0;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+}
+.login-form fieldset{
+    position: relative; 
+}
+.user-email{
+    background-color: yellow;
+}
+.user-pw{
+    background-color: pink;
+}
+.login-form label{
+    background-color: lime;
+    width: 4em;
+    display: inline-block;
+}
+.login-form input{
+    width: 100px;
+    height: 24px;
+    border: 1px solid #aaa;
+}
+.btn-login{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sign{
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: -1px;
+}
+.sign a::before{
+    content: '\e803';
+    font-family: 'fontello';
+    color: #f00;
 }
 /* 슬로건 */
 .slogan{
