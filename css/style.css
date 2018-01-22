@@ -22,6 +22,15 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+button , input{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -297,27 +306,35 @@ body{
 }
 .login-form fieldset{
     position: relative; 
+    padding-bottom: 10px;
+    border-bottom: 1px solid #aaa;
 }
 .user-email{
-    background-color: yellow;
+    margin-bottom: 5px;
 }
-.user-pw{
-    background-color: pink;
-}
+
 .login-form label{
-    background-color: lime;
     width: 4em;
     display: inline-block;
 }
 .login-form input{
-    width: 100px;
+    width: 95px;
     height: 24px;
     border: 1px solid #aaa;
+    padding-left: 5px;
+}
+.login-form label, .login-form input{
+    vertical-align: middle;
 }
 .btn-login{
     position: absolute;
     top: 0;
     right: 0;
+    color: #fff;
+    background-color: #e0652c;
+    width: 50px;
+    height: 53px;
+    border-radius: 3px;
 }
 .sign{
     border-radius: 0 0 5px 5px;
@@ -333,6 +350,70 @@ body{
     font-family: 'fontello';
     color: #f00;
 }
+/*  유효성 검사 배너 링크 */
+.validation{
+    margin-top: 20px;
+}
+.validation-list{
+    list-style: none;
+}
+.validation-list a{
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    padding: 5px 10px 5px 45px;
+    background: url("./images/validation_icon.png") no-repeat 15px 50%,
+    linear-gradient(to bottom, #ccc, #eee);
+    background-color: #ccc;
+    margin-bottom: 10px;
+}
+/* 웹 관련 용어 */
+.term{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: linear-gradient(to bottom, #ccc, #eee);
+    background-color: #ccc;
+    margin-top: 20px;
+}
+.term-heading{
+    font-size: 1.5rem;
+    font-family: 'Noto Sans Bold', sans-serif;
+}
+.term-list{
+    background: yellow;
+    margin-top: 10px;
+}
+.term-list::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.term-list-heading, .term-list-brief{
+    background: pink;
+    float: right;
+    width: 145px;
+}
+.term-list-heading{
+    color: #296897;
+    font-weight: bold;
+    margin-top: -3px;
+}
+.term-list-thumbnail{
+    background: lime;
+    float: left;
+}
+.term-list-thumbnail img{
+    display: block
+}
+.term-list-brief{
+    background: orange;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+
+
 /* 슬로건 */
 .slogan{
     background-color: #c3f;
