@@ -380,18 +380,12 @@ body{
     font-size: 1.5rem;
     font-family: 'Noto Sans Bold', sans-serif;
 }
-.term-list{
-    background: yellow;
-    margin-top: 10px;
-}
-.term-list::after{
+.term-list > div::after{
     content: "";
     display: block;
     clear: both;
 }
 .term-list-heading, .term-list-brief{
-    background: pink;
-    float: right;
     width: 145px;
 }
 .term-list-heading{
@@ -399,21 +393,30 @@ body{
     font-weight: bold;
     margin-top: -3px;
 }
-.term-list-thumbnail{
-    background: lime;
-    float: left;
-}
 .term-list-thumbnail img{
     display: block
 }
 .term-list-brief{
-    background: orange;
     line-height: 1.5;
     margin-top: 5px;
 }
-
-
-
+.term-list div{
+    margin-top: 10px;
+}
+.term-list div:nth-of-type(odd) .term-list-heading,
+.term-list div:nth-of-type(odd) .term-list-brief{
+    float: right;
+}
+.term-list div:nth-of-type(odd) .term-list-thumbnail{
+    float: left;
+}
+.term-list div:nth-of-type(even) .term-list-heading,
+.term-list div:nth-of-type(even) .term-list-brief{
+    float: left;
+}
+.term-list div:nth-of-type(even) .term-list-thumbnail{
+    float: right;
+}
 /* 슬로건 */
 .slogan{
     background-color: #c3f;
