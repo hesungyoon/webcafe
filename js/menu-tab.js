@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var mainMenu = $('.main-menu > li');
-
+    var tab = $('.board h2');
     // mainMenu.hover(function(){
     //     $(this).find('.sub-menu').toggleClass('sub-menu-act');
     // });
@@ -16,4 +16,8 @@ $(document).ready(function(){
         $(this).siblings().removeClass('menu-act');
         $(this).addClass('menu-act');
     });
+    tab.on('click focusin', function(){
+        $(this).parent().addClass('board-act').siblings().removeClass('board-act');
+    });
+
 });
