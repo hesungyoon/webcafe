@@ -426,10 +426,11 @@ body{
     background-color: #ccc;
     padding: 15px 25px 10px;
 }
-/* .search-form-wrapper{
+.search-form-wrapper{
     display: flex;
-    justify-content: space-between
-} */
+    justify-content: space-between;
+    -webkit-appearance:none;
+}
 .search-form label, .search-form input, .search-form button{
     vertical-align: middle;
 }
@@ -443,7 +444,7 @@ body{
     border-radius: 3px;
     padding: 1px 1px 1px 5px;
     height: 24px;
-    width: 196px;
+    /* width: 196px; */
     margin: 0 5px;
 }
 .btn-search{
@@ -455,6 +456,46 @@ body{
     font-size: 1.2rem;
     height: 24px;
 }
+/* 공지사항 및 자료실 */
+.board{
+    background: yellow;
+    margin-top: 20px;
+    position: relative;
+}
+.notice-list, .pds-list, .notice-more, .pds-more{
+    display: none;
+}
+.board-act .notice-list, .board-act .pds-list,
+.board-act .notice-more, .board-act .pds-more{
+    display: block;
+}
+.notice-heading, .pds-heading{
+    position: absolute;
+    top: 0;  
+}
+.notice-heading{
+   left: 0; 
+}
+.pds-heading{
+    left: 100px;
+}
+.notice-list, .pds-list{
+    list-style: none;
+    padding-top: 45px;
+    background: skyblue;
+}
+.notice-list li, .pds-list li{
+    display: flex;
+    justify-content: space-between;
+}
+.notice-more, .pds-more{
+    background: lime;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
 
 /* 슬로건 */
 .slogan{
