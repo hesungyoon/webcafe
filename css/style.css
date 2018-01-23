@@ -273,9 +273,6 @@ body{
     /* align-items: flex-start; */
     flex-wrap: wrap;
 }
-.group{
-    background-color: #fcf;
-}
 .group1{
     width: 250px;
 }
@@ -284,6 +281,7 @@ body{
 }
 .group3{
     width: 180px;
+    background: #fcf;
 }
 /* 로그인 */
 .login{
@@ -458,7 +456,6 @@ body{
 }
 /* 공지사항 및 자료실 */
 .board{
-    background: #fff;
     margin-top: 20px;
     position: relative;
 }
@@ -524,7 +521,61 @@ body{
     color: hsla(90, 50%, 30%, 1);
     margin-right: .5em;
 }
-
+/* 새소식 */
+.news{
+    margin-top: 20px;
+    position: relative;
+}
+.news::before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #aaa, #fff);
+}
+.news-heading{
+    color: #e0652c;
+    font-family: 'Noto Sans Bold', sans-serif;
+    font-size: 1.5rem;
+}
+.news-item{
+    margin-top: 35px;
+    position: relative;
+    min-height: 110px;
+}
+.news-item a{
+    display: block;
+    padding-left: 130px;
+    color: #181818;
+}
+.news-item-thumbnail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.news-item-heading{
+    font-weight: bold;
+}
+.news-item-date{
+    display: block;
+    margin: 5px 0;
+}
+.news-item-brief{
+    line-height: 1.5;
+}
+.news-item-thumbnail img{
+    margin-bottom: 15px;
+    box-shadow: 0 15px 25px 0 #aaa;
+}
+.news-more{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
 /* 슬로건 */
 .slogan{
     background-color: #c3f;
