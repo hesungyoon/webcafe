@@ -424,11 +424,11 @@ body{
     background-color: #ccc;
     padding: 15px 25px 10px;
 }
-.search-form-wrapper{
+/* .search-form-wrapper{
     display: flex;
     justify-content: space-between;
     -webkit-appearance:none;
-}
+} */
 .search-form label, .search-form input, .search-form button{
     vertical-align: middle;
 }
@@ -442,7 +442,7 @@ body{
     border-radius: 3px;
     padding: 1px 1px 1px 5px;
     height: 24px;
-    /* width: 196px; */
+    width: 196px;
     margin: 0 5px;
 }
 .btn-search{
@@ -575,6 +575,58 @@ body{
     top: -8px;
     right: -8px;
     padding: 8px;
+}
+/* 신규 이벤트 및 관련 사이트 */
+.event-related{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    background-color: #ccc;
+}
+.event{
+    border-bottom: 1px solid #aaa;
+    position: relative;
+}
+.event-heading, .related-heading{
+    font-family: 'Noto Sans Bold', sans-serif;
+    font-size: 1.5rem;
+}
+.event-heading span, .related-heading span{
+    color: #e0652c;
+}
+.event-thumbnail{
+    margin: 10px 0;
+    text-align: center;
+}
+.event-thumbnail img{
+    box-shadow: 5px 5px 0 0 #aaa;
+    /* clip-path: inset(10px, 150px, 80px, 10px); */
+    /* clip-path: inset(5% 20% 15% 10%); */
+    width: 90%;
+    height: auto;
+}
+.event-brief{
+    letter-spacing: -1px;
+}
+.btn-event{
+    display: flex;
+    position: absolute;
+    top: 3px; 
+    right: 0;
+}
+.btn-event-prev, .btn-event-next{
+    margin-left: 3px;
+    cursor: pointer;
+    border: 0;
+    padding: 18px 0 0 0;
+    width: 19px;
+    height: 18px;
+    overflow: hidden;
+    background: url("./images/back_forward.png") no-repeat;
+}
+.btn-event-next{
+    background-position: -37px 0; 
 }
 /* 슬로건 */
 .slogan{
