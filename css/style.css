@@ -685,10 +685,9 @@ body{
     counter-increment: number;
     margin: 5px 0;
     position: relative;
-    /* font-size: 20px; */
-    /* display: flex;
+    display: flex;
     justify-content: flex-start;
-    align-items: center; */
+    align-items: center;
 }
 .favorite-list li::before{
     content: counter(number, decimal);
@@ -699,14 +698,17 @@ body{
     font-size: 1.2rem;
     margin-right: .5em;
 }
+.favorite-list span{
+    margin-left: auto;
+}
 .up, .stop, .down{
     /* float: right;
     position: relative;
     top: 5px; */
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
     background: url("./images/rank.png") no-repeat;
     width: 9px;
     height: 11px;
@@ -729,13 +731,54 @@ body{
 }
 /* 슬로건 */
 .slogan{
-    background-color: #c3f;
-    height: 10vh;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* display: flex; */
+}
+.slogan-heading{
+    width: 110px;
+    height: 83px;
+    text-align: center;
+    line-height: 83px;
+    position: absolute;
+    bottom: -35px;
+    left: 25px;
+    /* margin: 0 auto -25px; */
+}
+.slogan-heading::before{
+    background: url("./images/coffee.png") no-repeat;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slogan-content{
+    margin: 0 50px 0 180px;
+    color: #a09874;
+    /* width: 700px; */
+}
+.slogan-content q{
+    font-weight: bold;
+    /* quotes: "[[" "]]"; */
+}
+.slogan-content q::before{
+    font-size: 3.5rem;
+    position: relative;
+    top: 15px;
+    left: -5px;
+}
+.slogan-content q::after{
+    content: "";
 }
 /* 푸터 */
+.footer-bg{
+    background: pink;
+}
 .footer{
-    background-color: #0f0;
-    height: 10vh;
+    background-color: yellow;
 }
 /* fontello font */
 .icon-ok:before { content: '\e800'; } 
