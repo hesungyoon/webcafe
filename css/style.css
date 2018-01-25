@@ -281,7 +281,6 @@ body{
 }
 .group3{
     width: 180px;
-    background: #fcf;
 }
 /* 로그인 */
 .login{
@@ -588,11 +587,11 @@ body{
     border-bottom: 1px solid #aaa;
     position: relative;
 }
-.event-heading, .related-heading{
+.event-heading, .related-heading, .favorite-heading{
     font-family: 'Noto Sans Bold', sans-serif;
     font-size: 1.5rem;
 }
-.event-heading span, .related-heading span{
+.event-heading span, .related-heading span, .favorite-heading span{
     color: #e0652c;
 }
 .event p{
@@ -654,7 +653,7 @@ body{
     text-indent: 25px;
 }
 /* 인기 사이트 */
-.favorite{
+/* .favorite{
     margin-top: 20px;
     background: yellow;
     border: 10px solid #000;
@@ -668,6 +667,65 @@ body{
 }
 .favorite:hover{
     transform: rotate(360deg) scale(.7) skew(-15deg);
+} */
+.favorite{
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    background-color: #ccc;
+    padding: 10px;
+    position: relative;
+}
+.favorite-list{
+    margin-top: 10px;
+    overflow: hidden;
+}
+.favorite-list li{
+    counter-increment: number;
+    margin: 5px 0;
+    position: relative;
+    /* font-size: 20px; */
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+}
+.favorite-list li::before{
+    content: counter(number, decimal);
+    color: #fff;
+    background-color: #aaa;
+    padding: 0 5px;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    margin-right: .5em;
+}
+.up, .stop, .down{
+    /* float: right;
+    position: relative;
+    top: 5px; */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: url("./images/rank.png") no-repeat;
+    width: 9px;
+    height: 11px;
+    white-space: nowrap;
+    text-indent: 9px;
+    overflow: hidden;
+    margin-left: auto;
+}
+.stop{
+    background-position: 0 50%;
+}
+.down{
+    background-position: 0 100%;
+}
+.favorite-more{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 8px;
 }
 /* 슬로건 */
 .slogan{
